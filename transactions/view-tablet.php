@@ -130,7 +130,7 @@
 			</div>
 			
 			<h4 class="title">Transaction List</h4>
-			<a href="#">
+			<a href="create-tablet-transaction.php">
 				<button class="add-tab-trans">
 					<i class="fa-solid fa-plus"></i> Add Transaction
 				</button>

@@ -87,54 +87,46 @@
 				</button>
 				<div class="glantern-content">
 					<h4>
-						<a href="#">
+						<a href="create-glantern.php">
 							<i class="fa-solid fa-plus"></i> Create Guang-Ming Lantern
 						</a>
 					</h4>	
 					<h4>
-						<a href="#">
+						<a href="search-glantern.php">
 							<i class="fa-solid fa-magnifying-glass"></i> Search Guang-Ming Lantern
 						</a>
 					</h4>
 				</div>
 			</div>
 		</div>
-		
+
 		<div>
-			<h3 class="title">Memorial Tablet: View Details</h3>
-			<a href="edit-blantern.php">
-				<button class="edit-blantern">
-					<i class="fa-solid fa-pencil"></i> Edit Details
+			<h3 class="title">Memorial Tablet: View Transaction</h3>
+			<a href="edit-tablet-transaction.php">
+				<button class="edit-tablet-trans">
+					<i class="fa-solid fa-pencil"></i> Edit Transaction
 				</button>
 			</a>
+			
+			<button class="delete-tablet-trans">
+				<i class="fa-solid fa-trash-can"></i> Delete Transaction
+			</button>
 			<hr/>
 			
-			<div class="blantern-row">
-				<div class="blantern-col1">
-					<p>Lantern ID:</p>
-					<p>Price (Blessing): RM</p>
-					<p>Price (Votive): RM</p>
+			<div class="tablet-row">
+				<div class="tablet-col1">
+					<p>Tablet ID:</p>
+					<p>Receipt Number:</p>
+					<p>Receipt Date:</p>
+					<p>Receipt Amount:</p>
 				</div>
-				<div class="blantern-col2">
-					<p>Contact Number:</p>
+				<div class="tablet-col2">
 					<p>Member ID:</p>
+					<p>Recorded By:</p>
 					<p>Remarks:</p>
 				</div>
 			</div>
-			
-			<h4 class="title">Transaction List</h4>
-			<a href="create-blantern-transaction.php">
-				<button class="add-bl-trans">
-					<i class="fa-solid fa-plus"></i> Add Transaction
-				</button>
-			</a>
-			<hr/>
-
-			<div>
-				<!--div for transaction list-->
-			</div>
 		</div>
 	</div>
-	
 </body>
 </html>

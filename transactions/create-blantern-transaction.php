@@ -17,7 +17,7 @@
 
 		<ul class="nav">
 			<li><a href="../members/create-member.php">Membership</a></li>
-			<li><a href="create-tablet.php">Transaction</a></li>
+			<li><a href="view-blantern-transaction.php">Transaction</a></li> <!--pilot testing on view transaction-->
 			<li><a href="#">Product</a></li>
 			<li><a href="#">Stock</a></li>
 		</ul>
@@ -87,54 +87,48 @@
 				</button>
 				<div class="glantern-content">
 					<h4>
-						<a href="#">
+						<a href="create-glantern.php">
 							<i class="fa-solid fa-plus"></i> Create Guang-Ming Lantern
 						</a>
 					</h4>	
 					<h4>
-						<a href="#">
+						<a href="search-glantern.php">
 							<i class="fa-solid fa-magnifying-glass"></i> Search Guang-Ming Lantern
 						</a>
 					</h4>
 				</div>
 			</div>
 		</div>
-		
-		<div>
-			<h3 class="title">Memorial Tablet: View Details</h3>
-			<a href="edit-blantern.php">
-				<button class="edit-blantern">
-					<i class="fa-solid fa-pencil"></i> Edit Details
-				</button>
-			</a>
-			<hr/>
-			
-			<div class="blantern-row">
-				<div class="blantern-col1">
-					<p>Lantern ID:</p>
-					<p>Price (Blessing): RM</p>
-					<p>Price (Votive): RM</p>
-				</div>
-				<div class="blantern-col2">
-					<p>Contact Number:</p>
-					<p>Member ID:</p>
-					<p>Remarks:</p>
-				</div>
-			</div>
-			
-			<h4 class="title">Transaction List</h4>
-			<a href="create-blantern-transaction.php">
-				<button class="add-bl-trans">
-					<i class="fa-solid fa-plus"></i> Add Transaction
-				</button>
-			</a>
-			<hr/>
 
-			<div>
-				<!--div for transaction list-->
-			</div>
+		<div>
+			<h3 class="title">Blessing Lantern: Create Transaction</h3>
+			<hr/>
+			<form>
+				<fieldset class="column1">
+					<label for="brec-num">Receipt Number (Blessing):</label><br>
+					<input type="text" id="brec-num" name="brec-num"><br>
+
+					<label for="vrec-num">Receipt Number (Votive):</label><br>
+					<input type="date" id="vrec-num" name="vrec-num"><br>
+
+					<label for="rec-date">Receipt Date:</label><br>
+					<input type="text" id="rec-date" name="rec-date"><br>
+				</fieldset>
+
+				<fieldset class="column2">
+					<label for="amount">Receipt Amount:</label><br>
+					<input type="text" id="amount" name="amount"><br>
+					
+					<label for="member-id">Member ID:</label><br>
+					<input type="text" id="member-id" name="member-id"><br>
+
+					<label for="remarks">Remarks:</label><br>
+					<textarea name="remarks"></textarea>
+				</fieldset>
+
+				<input type="submit" value="Submit"/>
+			</form>
 		</div>
 	</div>
-	
 </body>
 </html>
