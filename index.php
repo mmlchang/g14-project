@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/b41521ee1f.js"></script>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" type="image/x-icon" href="#">
+	<title>Tze Yin Membership Management Portal</title>
+</head>
+
+<body>
+	<div class="header">
+		<a href="index.php">
+			<img src="images/logo.jpg" alt="Home" class="logo">
+		</a>
+
+		<ul class="nav">
+			<li><a href="members/create-member.php">Membership</a></li>
+			<li><a href="transactions/create-tablet.php">Transaction</a></li>
+			<li><a href="#">Product</a></li>
+			<li><a href="#">Stock</a></li>
+		</ul>
+		
+		<div class="notification">
+			<button class="notif-bell"><i class="fa-solid fa-bell"></i></button>
+		</div>
+
+		<div class="user-dropdown">
+			<button class="dropdown-button">Hello, User
+				<i class="fa-solid fa-caret-down"></i>
+			</button>
+			<div class="user-content">
+				<a href="#">Edit User</a>
+				<a href="#">Log Out</a>
+			</div>
+		</div>
+		
+		<hr/>
+	</div>
+	
+	<div class="dashboard">
+		<h3 class="dash-title">Dashboard</h3>
+		<button class="reminder">
+			<i class="fa-solid fa-plus"></i> Reminders
+		</button>
+		<button class="whatsapp">
+			<i class="fa-brands fa-whatsapp"></i> Broadcast
+		</button>
+		<hr/>
+		
+		<h3 class="dash-date">Date</h3>
+		<p class="dash-year">Year</p>
+		
+		<div class="option-dropdown">
+			<button class="option-button">
+				<i class="fa-solid fa-ellipsis-vertical"></i>
+			</button>
+			<div class="option-content">
+				<a href="#">Edit Content</a>
+				<a href="#">Delete Content</a>
+			</div>
+		</div>
+		
+		<hr/>
+		<p class="dash-content">Content</p>
+		
+		<br/>
+		
+		<h3 class="dash-date">Date</h3>
+		<p class="dash-year">Year</p>
+		
+		<div class="option-dropdown">
+			<button class="option-button">
+				<i class="fa-solid fa-ellipsis-vertical"></i>
+			</button>
+			<div class="option-content">
+				<a href="#">Edit Content</a>
+				<a href="#">Delete Content</a>
+			</div>
+		</div>
+		
+		<hr/>
+		<p class="dash-content">Content</p>
+	</div>
+	
+	<hr/>
+	<h3 class="shortcut-title">Administration Shortcuts</h3>
+	<button class="filter">
+		<i class="fa-solid fa-filter"></i> Filter
+	</button>
+	<hr/>
+	
+	<div class="row"> 
+		<div class="column">
+			<div class="shortcut-cards"> 
+			<a href="#">
+				<div class="shortcut"> 
+					<div class="color1">
+						<div class="shortcut-container">
+							<h4 class="shortcut-title">Shortcut</h4>
+							<p class="shortcut-desc">Description</p>
+						</div>
+					</div>
+				</div>
+			</a>
+			</div>
+		</div>
+			
+		<div class="column">
+			<div class="shortcut-cards"> 
+			<a href="#">
+				<div class="shortcut"> 
+					<div class="color2">
+						<div class="shortcut-container">
+							<h4 class="shortcut-title">Shortcut</h4>
+							<p class="shortcut-desc">Description</p>
+						</div>
+					</div>
+				</div>
+			</a>
+			</div>
+		</div>
+		
+		<div class="column">
+			<div class="shortcut-cards"> 
+			<a href="#">
+				<div class="shortcut"> 
+					<div class="color3">
+						<div class="shortcut-container">
+							<h4 class="shortcut-title">Shortcut</h4>
+							<p class="shortcut-desc">Description</p>
+						</div>
+					</div>
+				</div>
+			</a>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
