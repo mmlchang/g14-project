@@ -1,3 +1,24 @@
+<?php 
+if(isset($_POST['btn_submit'])){ 
+	include '../db/dbconnection.php';  
+	$sql = "INSERT INTO GLantern (GLantern_id, contact_num, remarks, receipt_num , receipt_date ) VALUES ('".$_POST['gl-id']."','".$_POST['contact']."','".$_POST['remarks']."','".$_POST['receipt-num']."','".$_POST['receipt-date']."')";
+	
+	if (mysqli_query($conn, $sql)) {
+		/*
+		$sql = "INSERT INTO Booking (member_id , book_date , BLantern_id) VALUES ('".$_POST['member-id']."','".date("Y/m/d")."','".$_POST['bl-id']."')";
+	
+		if (mysqli_query($conn, $sql)) {
+    		echo "New record created successfully";
+		} else {
+			echo "Member is not exist";
+		}
+		*/
+    	echo "<script>alert('The information is added');window.location.href</script>";
+	} else {
+    	echo "<script>alert('Please try again!');window.location.href</script>";
+	} 
+}    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
