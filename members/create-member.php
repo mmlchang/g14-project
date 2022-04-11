@@ -1,3 +1,31 @@
+<?php 
+if(isset($_POST['btn_submit'])){ 
+	include '../db/dbconnection.php';  
+	$sql = "INSERT INTO member (member_id, member_name, member_ic, member_citizenship, member_age, member_gender, member_dob, member_tel, member_job, member_address,member_type, recommender_id, recommender_name, accept_date, remarks) VALUES ('".$_POST['id']."','".$_POST['name']."','".$_POST['ic']."','".$_POST['citizen']."','".$_POST['age']."','".$_POST['gender']."','".$_POST['dob']."','".$_POST['contact']."','".$_POST['job']."','".$_POST['address']."','".$_POST['member']."','".$_POST['recommender']."','".$_POST['recommender-id']."','".$_POST['accept-date1']."','".$_POST['remarks']."')";
+	
+	if (mysqli_query($conn, $sql)) {
+		/*
+		$sql = "INSERT INTO Membership (member_id, username) VALUES ('".$_POST['member-id']."')";
+	
+		if (mysqli_query($conn, $sql)) {
+    		echo "New record created successfully";
+		} else {
+			echo "Member is not exist";
+		}
+		*/
+		echo "New record created successfully";
+	} else {
+		echo "Member is not exist";
+	}
+		/*
+    	echo "<script>alert('The information is added');window.location.href</script>";
+	} else {
+    	echo "<script>alert('Please try again!');window.location.href</script>";
+	} 
+	*/
+		echo "New record created successfully";
+}    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,13 +86,14 @@
 		<div>
 			<h3 class="title">Create Member</h3>
 			<hr/>
-			<form>
+			<form method="post">
 				<fieldset class="column1">
+					<label for="id">Member ID:</label><br>
+					<input type="text" id="id" name="id"><br>
+
 					<label for="name">Name:</label><br>
 					<input type="text" id="name" name="name"><br>
 
-					<label for="id">Member ID:</label><br>
-					<input type="text" id="id" name="id"><br>
 
 					<label for="ic">IC Number:</label><br>
 					<input type="text" id="ic" name="ic"><br>
@@ -104,20 +133,20 @@
 						<option value="non-member">Non-member</option>
 					</select><br>
 
+					<label for="recommender-id">Recommender's ID:</label><br>
+					<input type="text" id="recommender-id" name="recommender-id"><br> 
+
 					<label for="recommender">Recommender's Name:</label><br>
 					<input type="text" id="recommender" name="recommender"><br>
 
-					<label for="recommender-id">Recommender's ID:</label><br>
-					<input type="text" id="recommender-id" name="recommender-id"><br>
-
 					<label for="accept-date">Date of Admission:</label><br>
-					<input type="date" id="accept-date" name="accept-date"><br>
+					<input type="date" id="accept-date" name="accept-date1"><br>
 
 					<label for="remarks">Remarks:</label><br>
 					<textarea name="remarks"></textarea>
 				</fieldset>
 
-				<input type="submit" value="Submit"/>
+				<input type="submit" name="btn_submit" value="Submit"/>
 			</form>
 		</div>
 	</div>
