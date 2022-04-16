@@ -1,0 +1,104 @@
+.info_box {
+
+  border: 1px solid gray;
+  padding: 8px;
+  padding-bottom: 35px;
+  padding-left: 10px;
+  margin-top: 120px;
+  margin-left: 420px;
+  margin-right: 430px;
+
+}
+
+img.logo {
+
+  width: 170px;
+  height: 160px;
+  padding-left:50px;
+  padding-bottom: 10px;
+  float: left;
+
+}
+
+.org_name1 h1 {
+
+  float: left;
+  padding-left: 5px;
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #595959;
+
+}
+
+.org_name {
+
+  float: left;
+  padding-top: 30px;
+  padding-left: 28px;
+  font-size: 32px;
+  font-family: sans-serif;
+  color: #595959;
+
+}
+
+.sign_in {
+
+  padding-left: 50px;
+  font-family: sans-serif;
+  font-size: 25px;
+  color: #595959;
+
+}
+
+
+.container {
+
+  padding-left:50px;
+
+}
+
+.username_login input {
+
+  padding: 10px;
+  width: 520px;
+  border-color: lightgray;
+  margin-bottom: 10px;
+  color: darkgray;
+
+}
+
+.password_login input {
+
+  padding: 10px;
+  width: 520px;
+  border-color: lightgray;
+  margin-bottom: 20px;
+
+
+}
+
+.show_pass {
+
+  color: #595959;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+
+}
+
+.signin_keep {
+
+  color: #595959;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+
+}
+
+.login_btn {
+
+  margin-left: 35px;
+  width: 575px;
+  padding: 8px;
+  background-color: #7C7D91;
+  color: white;
+
+}
