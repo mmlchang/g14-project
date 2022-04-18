@@ -1,3 +1,10 @@
+<?php
+    include '../db/dbconnection.php';  
+// Check connection 
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,39 +65,55 @@
 		
 		<div>
 			<h3 class="title">View Member</h3>
-			<a href="edit-member.php">
+			<hr/>
+			<?php 
+			$M_ID = $_GET['Id'];
+    		$sql = "SELECT * FROM member WHERE member_id = '".$M_ID."'"; 	 
+    		$result = $conn->query($sql);  
+			if (mysqli_num_rows($result) > 0) {
+  			// output data of each row
+  				while($row = mysqli_fetch_array($result)){ 
+			?>
+			<div class="member-row">
+				<div class="member-col1">
+					<p>Member ID: <?php echo $row['member_id'] ?></p>
+					<p>Name: <?php echo $row['member_name'] ?> </p>
+					<p>IC Number: <?php echo $row["member_ic"] ?></p>
+					<p>Citizenship: <?php echo $row["member_citizenship"] ?></p>
+					<p>Age: <?php echo $row["member_age"] ?></p>
+					<p>Gender: <?php echo $row["member_gender"] ?></p>
+					<p>Date of Birth: <?php echo $row["member_dob"] ?></p>
+					<p>Contact Number: <?php echo $row["member_tel"] ?></p>
+				</div>
+				<div class="member-col2">
+					<p>Occupation: <?php echo $row["member_job"] ?></p>
+					<p>Address: <?php echo $row["member_address"] ?></p>
+					<p>Member Type: <?php echo $row["member_type"] ?></p>
+					<p>Recommender's Name: <?php echo $row["recommender_name"] ?></p>
+					<p>Recommender's ID: <?php echo $row["recommender_id"] ?></p>
+					<p>Date of Admission: <?php echo $row["accept_date"] ?></p>
+					<p>Recorded By: <?php?></p>
+					<p>Remarks <?php echo $row["remarks"] ?>:</p>
+				</div>
+			</div> 
+			<a href="edit-member.php?Id=<?php echo $row['member_id']?>">
 				<button class="edit-member">
 					<i class="fa-solid fa-pencil"></i> Edit Member
 				</button>
 			</a>
+			<a href="delete-member.php?Id=<?php echo $row['member_id']?>">
+				<button class="edit-member">
+					<i class="fa-solid fa-trash-can"></i> Delete Member
+				</button>
+			</a>
 			
-			<button class="delete-member">
-				<i class="fa-solid fa-trash-can"></i> Delete Member
-			</button>
-			<hr/>
-			
-			<div class="member-row">
-				<div class="member-col1">
-					<p>Name:</p>
-					<p>Member ID:</p>
-					<p>IC Number:</p>
-					<p>Citizenship:</p>
-					<p>Age:</p>
-					<p>Gender:</p>
-					<p>Date of Birth:</p>
-					<p>Contact Number:</p>
-				</div>
-				<div class="member-col2">
-					<p>Occupation:</p>
-					<p>Address:</p>
-					<p>Member Type:</p>
-					<p>Recommender's Name:</p>
-					<p>Recommender's ID:</p>
-					<p>Date of Admission:</p>
-					<p>Recorded By:</p>
-					<p>Remarks:</p>
-				</div>
-			</div>
+			<?php  
+  				}
+			}
+			else{ 
+    			echo "No record exists!!"; 
+    		}
+			?> 
 		</div>
 	</div>
 	

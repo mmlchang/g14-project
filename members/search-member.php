@@ -77,7 +77,7 @@ $(document).ready(function(){
 		</a>
 
 		<ul class="nav">
-			<li><a href="view-member.php">Membership</a></li> <!--experiment view-member without result for html/css testing-->
+			<li><a href="view-member.php">Membership</a></li>  
 			<li><a href="../transactions/create-tablet.php">Transaction</a></li>
 			<li><a href="#">Product</a></li>
 			<li><a href="#">Stock</a></li>
@@ -118,7 +118,7 @@ $(document).ready(function(){
 		</div>
 		
     	<div class="search-box">
-        	<input type="text" autocomplete="off" placeholder="Search country..." />
+        	<input type="text" autocomplete="off" placeholder="Search ID or Name " />
         	<div class="result"></div>
     	</div>
 		

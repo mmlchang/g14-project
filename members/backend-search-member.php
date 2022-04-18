@@ -10,8 +10,7 @@ if($conn === false){
  
 if(isset($_REQUEST["term"])){
     // Prepare a select statement
-    $sql = "SELECT * FROM member WHERE member_id LIKE '%".$_REQUEST['term']."%' OR member_name LIKE '%".$_REQUEST['term']."%'";
-    echo $sql;
+    $sql = "SELECT * FROM member WHERE member_id LIKE '%".$_REQUEST['term']."%' OR member_name LIKE '%".$_REQUEST['term']."%'"; 
     if($stmt = mysqli_prepare($conn, $sql)){
         // Bind variables to the prepared statement as parameters
         /*
@@ -29,10 +28,10 @@ if(isset($_REQUEST["term"])){
             if(mysqli_num_rows($result) > 0){
                 // Fetch result rows as an associative array
                 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    if($_REQUEST['term'] == $row["member_id"]){
-                        echo "<p>" . $row["member_id"] . "</p>";
+                    if(strpos($row["member_id"], $_REQUEST['term'] ) !== false){
+                        echo "<a href=view-member.php?Id=".$row["member_id"]."><p>" . $row["member_id"] . "</p></a>";
                     }
-                    if($_REQUEST['term'] == $row["member_name"]){
+                    if(strpos($row["member_name"], $_REQUEST['term'] ) !== false){
                         echo "<p>" . $row["member_name"] . "</p>";
                     }
                 }
