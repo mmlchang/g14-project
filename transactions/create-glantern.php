@@ -1,19 +1,15 @@
 <?php 
+include '../db/dbconnection.php';  
 if(isset($_POST['btn_submit'])){ 
-	include '../db/dbconnection.php';  
-	$sql = "INSERT INTO GLantern (GLantern_id, contact_num, remarks, receipt_num , receipt_date ) VALUES ('".$_POST['gl-id']."','".$_POST['contact']."','".$_POST['remarks']."','".$_POST['receipt-num']."','".$_POST['receipt-date']."')";
-	
-	if (mysqli_query($conn, $sql)) {
-		/*
-		$sql = "INSERT INTO Booking (member_id , book_date , BLantern_id) VALUES ('".$_POST['member-id']."','".date("Y/m/d")."','".$_POST['bl-id']."')";
-	
-		if (mysqli_query($conn, $sql)) {
-    		echo "New record created successfully";
+	$sql = "INSERT INTO GLantern (GLantern_id, contact_num, remarks, receipt_num , receipt_date, price) VALUES ('".$_POST['gl-id']."','".$_POST['contact']."','".$_POST['remarks']."','".$_POST['receipt-num']."','".$_POST['receipt-date']."','".$_POST['receipt-amount']."')"; 
+	echo $sql;
+	if (mysqli_query($conn, $sql)) { 
+		$ssql = "INSERT INTO Booking (member_id , book_date , GLantern_id) VALUES ('".$_POST['member-id']."','".date("Y/m/d")."','".$_POST['gl-id']."')";
+		if (mysqli_query($conn, $ssql)) {
+    		echo "<script>alert('The information is added');window.location.href</script>";
 		} else {
 			echo "Member is not exist";
-		}
-		*/
-    	echo "<script>alert('The information is added');window.location.href</script>";
+		} 
 	} else {
     	echo "<script>alert('Please try again!');window.location.href</script>";
 	} 
@@ -124,7 +120,7 @@ if(isset($_POST['btn_submit'])){
 		<div>
 			<h3 class="title">Guang-Ming Lantern: Create Details</h3>
 			<hr/>
-			<form>
+			<form method="post">
 				<fieldset class="gl-column1">
 					<label for="gl-id">Lantern ID:</label><br>
 					<input type="text" id="gl-id" name="gl-id"><br>
@@ -134,6 +130,9 @@ if(isset($_POST['btn_submit'])){
 					
 					<label for="receipt-date">Receipt Date:</label><br>
 					<input type="date" id="receipt-date" name="receipt-date"><br>
+
+					<label for="contact">Contact Number:</label><br>
+					<input type="text" id="contact" name="contact"><br> 
 				</fieldset>
 				
 				<fieldset class="gl-column2">
@@ -147,7 +146,7 @@ if(isset($_POST['btn_submit'])){
 					<textarea name="remarks"></textarea>
 				</fieldset>
 
-				<input type="submit" value="Submit"/>
+				<input type="submit" name="btn_submit" value="Submit"/>
 			</form>
 		</div>
 	</div>
