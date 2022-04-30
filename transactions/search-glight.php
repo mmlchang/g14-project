@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://kit.fontawesome.com/b41521ee1f.js"></script>
 	<script>
 		if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 			document.documentElement.classList.add('dark');
@@ -12,6 +11,7 @@
 		}
 	</script>
 	<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" />
+	<script src="https://kit.fontawesome.com/b41521ee1f.js"></script>
 	<link rel="stylesheet" href="../styles/style.css">
 	<link rel="icon" type="image/x-icon" href="../images/logo.ico">
 	<title>Tze Yin Membership Management Portal</title>
@@ -40,16 +40,16 @@
 			<li>
 			  <div class="flex items-center">
 				<svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-				<p class="ml-1 text-sm font-medium text-gray-700 md:ml-2 dark:text-gray-400">Search Memorial Tablet</p>
+				<p class="ml-1 text-sm font-medium text-gray-700 md:ml-2 dark:text-gray-400">Search Guang-Ming Light</p>
 			  </div>
 			</li>
 		  </ol>
 		</nav>
 	
 		<div>
-			<h2 class="flex items-center mb-1 text-xl font-bold text-gray-900 dark:text-white">Search Memorial Tablet</h2>
+			<h2 class="flex items-center mb-1 text-xl font-bold text-gray-900 dark:text-white">Search Guang-Ming Light</h2>
 			<hr class="border-gray-300 dark:border-gray-600 my-3"/>
-			<form method="post">
+			<form>
 				<div class="relative z-0 w-full mb-6 group"> 
 					<label for="simple-search" class="sr-only">Search</label>
 						<div class="relative w-full">
@@ -65,10 +65,10 @@
 				<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
 					<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
 						<tr>
-							<th scope="col" class="px-6 py-3">Tablet id</th>
-							<th scope="col" class="px-6 py-3">Ancestor name</th>
-							<th scope="col" class="px-6 py-3">Main contact</th>
-							<th scope="col" class="px-6 py-3">Payment type</th>
+							<th scope="col" class="px-6 py-3">Light id</th>
+							<th scope="col" class="px-6 py-3">Member id</th>
+							<th scope="col" class="px-6 py-3">Price</th>
+							<th scope="col" class="px-6 py-3">Contact no</th>
 							<th scope="col" class="px-6 py-3">
 								<span class="sr-only">Edit</span>
 							</th>
@@ -77,36 +77,36 @@
 					<tbody>
 						<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
 							<th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-								<a href="view-tablet.php?name=transaction" class="dark:hover:text-blue-500 md:hover:text-blue-700">T000</a>
+								<a href="view-glight.php?name=transaction" class="dark:hover:text-blue-500 md:hover:text-blue-700">G000</a>
 							</th>
 							<td class="px-6 py-4">
-								Jerry Doe Chi Li
+								M000
+							</td>
+							<td class="px-6 py-4">
+								RM 5,000
 							</td>
 							<td class="px-6 py-4">
 								0123456789
 							</td>
-							<td class="px-6 py-4">
-								Permanent
-							</td>
 							<td class="px-6 py-4 text-right">
-								<a href="edit-tablet.php?name=transaction" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+								<a href="edit-glight.php?name=transaction" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
 							</td>
 						</tr>
 						<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
 							<th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-								<a href="view-tablet.php?name=transaction" class="dark:hover:text-blue-500 md:hover:text-blue-700">T001</a>
+								<a href="view-glight.php?name=transaction" class="dark:hover:text-blue-500 md:hover:text-blue-700">G001</a>
 							</th>
 							<td class="px-6 py-4">
-								Joseph Doh Pa Wai
+								M001
 							</td>
 							<td class="px-6 py-4">
-								0152346789
+								RM 4,500
 							</td>
 							<td class="px-6 py-4">
-								Installation
+								0192345678
 							</td>
 							<td class="px-6 py-4 text-right">
-								<a href="edit-tablet.php?name=transaction" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+								<a href="edit-glight.php?name=transaction" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
 							</td>
 						</tr>
 					</tbody>
@@ -190,6 +190,6 @@
 			}
 
 		});
-	</script>	
+	</script>
 </body>
 </html>

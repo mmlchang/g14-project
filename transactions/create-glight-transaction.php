@@ -18,7 +18,6 @@
 	<title>Tze Yin Membership Management Portal</title>
 </head>
 
-
 <body class="dark:bg-gray-900">
 	<?php
 		include('../templates/header.php');
@@ -42,21 +41,21 @@
 			<li>
 			  <div class="flex items-center">
 				<svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-				<p class="ml-1 text-sm font-medium text-gray-700 md:ml-2 dark:text-gray-400">Create Lantern Transaction</p>
+				<p class="ml-1 text-sm font-medium text-gray-700 md:ml-2 dark:text-gray-400">Create Light Transaction</p>
 			  </div>
 			</li>
 		  </ol>
 		</nav>
 	
 		<div>
-			<h2 class="flex items-center mb-1 text-xl font-bold text-gray-900 dark:text-white">Create Lantern Transaction</h2>
+			<h2 class="flex items-center mb-1 text-xl font-bold text-gray-900 dark:text-white">Create Light Transaction</h2>
 			<hr class="border-gray-300 dark:border-gray-600 my-3"/>
 			
 			<form method="post">
 				<div class="grid xl:grid-cols-2 xl:gap-6">
 					<div class="relative z-0 w-full mb-6 group">
-						<label for="id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lantern ID*</label>
-						<input type="text" id="id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="B000" required>
+						<label for="id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Light ID*</label>
+						<input type="text" id="id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="G000" required>
 					</div>
 				 	<div class="relative z-0 w-full mb-6 group">
 						<label for="member" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Member ID*</label>
@@ -65,15 +64,9 @@
 				 </div>
 				<div class="grid xl:grid-cols-2 xl:gap-6">
 					<div class="relative z-0 w-full mb-6 group">
-						<label for="blessing" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blessing Receipt</label>
-						<input type="text" id="blessing" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="R000">
+						<label for="receipt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Receipt Number</label>
+						<input type="text" id="receipt" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="R000">
 					 </div>
-					<div class="relative z-0 w-full mb-6 group">
-						<label for="votive" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Votive Receipt</label>
-						<input type="text" id="votive" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="R000">
-					 </div>
-				 </div>
-				<div class="grid xl:grid-cols-2 xl:gap-6">
 					<div class="relative z-0 w-full mb-6 group">
 						<label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Receipt Date*</label>
 						<div class="relative">
@@ -83,6 +76,8 @@
   							<input datepicker datepicker-format="dd/mm/yyyy" datepicker-buttons type="text" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="dd/mm/yyyy" required>
 						</div>
 					</div>
+				 </div>
+				<div class="grid xl:grid-cols-2 xl:gap-6">
 					<div class="relative z-0 w-full mb-6 group">
 						<label for="amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Amount</label>
 						<div class="flex">
