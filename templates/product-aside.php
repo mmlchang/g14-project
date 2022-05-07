@@ -13,25 +13,25 @@
 			</ul>
 			<ul class="pt-4 mt-4 space-y-2 border-t border-gray-300 dark:border-gray-600">
 				<li>
-					<a href="create-member.php?name=member&aside=create-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "create-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
+					<a href="Create_product.php?name=member&aside=create-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "create-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
 						<i class="fa-solid fa-plus"></i>
 						<span class="ml-4">Create Product</span>
 					</a>
 				</li>
 				<li>
-					<a href="create-member.php?name=member&aside=create-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "create-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
+					<a href="Edit-product.php?name=member&aside=create-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "create-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
 						<i class="fa-solid fa-plus"></i>
 						<span class="ml-4">Edit Product</span>
 					</a>
 				</li>
 				<li>
-					<a href="create-member.php?name=member&aside=create-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "create-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
+					<a href="View_product.php?name=member&aside=create-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "create-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
 						<i class="fa-solid fa-magnifying-glass"></i>
 						<span class="ml-4">View Products</span>
 					</a>
 				</li>
 				<li>
-					<a href="search-member.php?name=member&aside=search-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "search-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
+					<a href="Search-product.php?name=member&aside=search-member" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 <?php if($aside == "search-member") echo "md:text-blue-700 dark:text-white"; else echo "dark:hover:text-white dark:text-gray-400"?> hover:bg-gray-200 dark:hover:bg-gray-700 group">
 						<i class="fa-solid fa-magnifying-glass"></i>
 						<span class="ml-4">Search Products</span>
 					</a>
